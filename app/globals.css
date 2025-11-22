@@ -36,8 +36,8 @@ body {
   width: 60px;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 8px solid #1e3a8a; /* pick any blue for now */
-  border-right-color: #93c5fd;
+  border: 8px solid #eba904; /* pick any blue for now */
+  border-right-color: #111201;
   animation: rotate 1s infinite linear;
 }
 
