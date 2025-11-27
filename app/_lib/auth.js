@@ -38,6 +38,8 @@ export const {
 			return session;
 		},
 	},
+	//“If a user needs to log in, send them to
+	//  /login instead of the default NextAuth login page.”
 	pages: {
 		signIn: '/login',
 	},
