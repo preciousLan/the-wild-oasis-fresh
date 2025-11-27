@@ -43,7 +43,7 @@ function Button({ children, filter, isActive, handleFilter }) {
 			className={`px-5 py-2 ${
 				isActive === filter
 					? 'bg-red-200'
-					: ' hover:bg-amber-200 hover:text-foreground'
+					: ' hover:bg-gray-600 hover:text-foreground'
 			}`}
 			onClick={() => handleFilter(filter)}>
 			{children}

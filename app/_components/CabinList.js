@@ -8,6 +8,7 @@ export default async function CabinList({ filter, sort }) {
 	const cabins = await getCabins();
 	if (!cabins.length) return null;
 
+
 	let filteredValue;
 	if (filter === 'all') filteredValue = cabins;
 	if (filter === 'small')
