@@ -15,10 +15,12 @@ export const {
 		}),
 	],
 	callbacks: {
+		//decide whether the user is allowed to access that page or API route
 		authorized({ auth, request }) {
 			return !!auth?.user;
 		},
 		//signIn runs right after a successful Google login
+		//side database tasks like creating a user
 		async signIn({ user, account, profile }) {
 			try {
 				const existingGuest = await getGuest(user.email);

@@ -14,6 +14,10 @@ import { auth } from "./app/_lib/auth"
 //  run the authentication middleware first
 export const middleware = auth
 
-export const config = {
-  matcher: ["/((?!login|_next|api).*)"], // protect all pages except login, _next, api
-};
+export const config= {
+    matcher: ["/account/:path*"],
+}
+
+// export const config = {
+//   matcher: ["/((?!login|_next|api).*)"], // protect all pages except login, _next, api
+// };
