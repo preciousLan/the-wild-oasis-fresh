@@ -6,11 +6,13 @@ import React from 'react';
 
 export const Filter = () => {
 	const searchParams = useSearchParams();
+
 	const router = useRouter();
 	const Pathname = usePathname();
 
 	function handleFilter(filter) {
 		const params = new URLSearchParams(searchParams);
+
 		params.set('capacity', filter);
 
 		router.replace(`${Pathname}?${params.toString()}`);

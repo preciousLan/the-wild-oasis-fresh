@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body>
+			<body className=' scrollbar-hide'>
 				<div
 					className={`bg-gray-800 w-full min-h-screen ${josefin.className} flex flex-col antialiased`}>
 					<Header />

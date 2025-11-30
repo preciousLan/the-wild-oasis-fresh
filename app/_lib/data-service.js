@@ -17,7 +17,7 @@ export async function getCabin(id) {
 
 	if (error) {
 		console.error(error);
-		notFound()
+		notFound();
 	}
 
 	return data;
@@ -79,7 +79,7 @@ export async function getBooking(id) {
 }
 
 export async function getBookings(guestId) {
-	const { data, error, count } = await supabase
+	const { data, error } = await supabase
 		.from('bookings')
 		// We actually also need data on the cabins as well. But let's ONLY take the data that we actually need, in order to reduce downloaded data.
 		.select(
@@ -179,6 +179,7 @@ export async function createBooking(newBooking) {
 	return data;
 }
 
+/*
 /////////////
 // UPDATE
 
@@ -225,3 +226,4 @@ export async function deleteBooking(id) {
 	}
 	return data;
 }
+*/
