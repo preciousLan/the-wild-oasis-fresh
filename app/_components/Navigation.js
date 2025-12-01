@@ -5,6 +5,7 @@ import Image from 'next/image';
 export default async function Navigation() {
 	const session = await auth();
 
+
 	return (
 		<nav className='z-10 text-xl'>
 			<ul className='flex gap-16 items-center text-white'>
@@ -36,7 +37,7 @@ export default async function Navigation() {
 									className='w-8 h-8 rounded-full'
 									referrerPolicy='no-referrer'
 								/>
-								<span>Guest area</span>
+								<span>{session.user.name.split(" ")[0]}</span>
 							</div>
 						</Link>
 					) : (

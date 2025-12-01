@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 import { auth } from '../_lib/auth';
 
@@ -8,7 +7,7 @@ export const metadata = {
 
 const page = async () => {
 	const session = await auth();
-	console.log(session)
+	
 	const firstName = session.user.name.split(' ')[0];
 
 	return (
